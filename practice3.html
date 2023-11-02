@@ -1,0 +1,43 @@
+<!--
+EECS 348 Lab 7
+Webpage with fun font stuff going on. 
+practice2.html
+Ky Jost 
+26 October 2023 
+-->
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>JavaScript Password Verification</title>
+    </head>
+
+    <body>
+        <form>
+            <label for="one">Enter your password: </label>
+            <input type="text" id="one"> 
+
+            <label for="two">Enter your password: </label>
+            <input type="text" id="two"> 
+        </form>
+
+        <button onclick="verify()">Verify</button>
+    </body>
+
+    <script>
+        function verify() {
+            var one = document.getElementById("one").value; 
+            var two = document.getElementById("two").value; 
+
+            var oneS = String(one); 
+            var twoS = String(two); 
+
+            if (oneS != twoS) {
+                alert("Passwords do not match"); 
+            } else if (oneS.length < 8) {
+                alert("Password must be 8 characters"); 
+            } else {
+                alert("Password is valid. ")
+            }
+        }
+    </script>
+</html>
